@@ -1,4 +1,10 @@
 #!/bin/bash
 
-# Default is "World"
-echo "Hello, $1"
+source lib/greeter.sh
+
+name="$1"
+if [ -z "$name" ]; then
+    name="World"
+fi
+
+Greeter "$name"
